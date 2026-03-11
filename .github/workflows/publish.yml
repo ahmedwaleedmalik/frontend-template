@@ -64,8 +64,8 @@ jobs:
       - name: Set chart version from tag
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
-          sed -i "s/^version:.*/version: ${VERSION}/" charts/frontend-template/Chart.yaml
-          sed -i "s/^appVersion:.*/appVersion: \"${VERSION}\"/" charts/frontend-template/Chart.yaml
+          sed -i "s/^version:.*/version: ${VERSION}/" charts/application/Chart.yaml
+          sed -i "s/^appVersion:.*/appVersion: \"${VERSION}\"/" charts/application/Chart.yaml
 
       - uses: actions/setup-go@v5
         with:
@@ -77,5 +77,5 @@ jobs:
 
       - name: Package and push chart
         run: |
-          helm package charts/frontend-template
+          helm package charts/application
           helm push frontend-template-*.tgz oci://ghcr.io/${{ github.repository_owner }}/charts

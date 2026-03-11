@@ -87,7 +87,7 @@ After cloning, update the following for your project:
 | License file   | `LICENSE`                        | Replace with your license                                 |
 | License header | `hack/license-header.ts`         | Update header text, then run `npm run lint:fix` to apply  |
 | Image label    | `Dockerfile` → `LABEL`           | Update `org.opencontainers.image.source` to your repo URL |
-| Chart name     | `charts/frontend-template/`      | Rename directory and update `Chart.yaml` name             |
+| Chart name     | `charts/application/Chart.yaml`  | Update `name` field in `Chart.yaml`                       |
 | Chart image    | `charts/*/values.yaml` → `image` | Set `image.repository` to your `ghcr.io` image            |
 | AI context     | `AGENTS.md`                      | Update project description for AI tools                   |
 
