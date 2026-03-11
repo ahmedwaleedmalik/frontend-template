@@ -67,7 +67,7 @@ jobs:
           sed -i "s/^version:.*/version: ${VERSION}/" charts/application/Chart.yaml
           sed -i "s/^appVersion:.*/appVersion: \"${VERSION}\"/" charts/application/Chart.yaml
 
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: stable
           cache: false
